@@ -1,0 +1,144 @@
+:root{
+    --colorViolet: #FC91FC;
+    --colorAnti-flashWhite: #cac7c7;
+    --colorLavender-blush: #F4E9E9;
+    --colorRaisin-black: #2A2727;
+    --colorPink: #FFC0CB;
+    --colorTransparent: transparent;
+}
+
+@font-face {
+    font-family: Carlito;
+    src: url("../fonts/Carlito-Regular.ttf");
+}
+
+@font-face{
+    font-family: "IBM-Plex-Serif";
+    src: url("../fonts/IBMPlexSerif-Regular.ttf");
+}
+
+body{
+    background: var(--colorRaisin-black) url(../images/container_bg.png);
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    font-family: IBM-Plex-Serif;
+    color: var(--colorPink);
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+li a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--colorPink);
+    border: solid 3px var(--colorAnti-flashWhite);
+    font-family: IBM-Plex-Serif;
+}
+li a:hover{
+    background-color: var(--colorViolet);
+    color: var(--colorLavender-blush);
+    border-radius: 15px;
+    animation: normal infinite ccolor 3s;
+    font-family: Carlito;
+}
+
+#presentacion{
+    display: flex;
+    flex-direction: row;
+    color: var(--colorLavender-blush);
+    font-family: Carlito;
+}
+#presentacion div h2{
+    color: var(--colorViolet);
+    font-family: IBM-Plex-Serif;
+}
+#photo-container {
+    height: 500px;
+    width: 375px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    left: 45%;
+    margin-bottom: 50px;
+}
+#mainePhoto{
+    width: 100%;
+    transition: all .5s ease-in;
+}
+#photo-container #mainePhoto:hover{
+    cursor: none;
+    transform: scale(1.1);
+    transition: all .3s ease-in;
+}
+
+#proyectos{
+    display: flex;
+    flex-direction: column;
+    max-width: 1507px;
+    margin: 0px;
+    width: 100%;
+}
+#proyectos .grid{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+#proyectos div h2{
+    color: var(--colorViolet);
+    position: absolute;
+    font-family: IBM-Plex-Serif;
+}
+.proyecto{
+    border: solid 2px var(--colorRaisin-black);
+    margin-top: 95px;
+}
+.proyecto img{
+    width: 751px;
+    height: 500px;
+    object-fit: cover;
+}
+.proyecto p{
+    font-family: Carlito;
+    color: var(--colorLavender-blush);
+}
+
+#tecnologias{
+    height: 500px;
+    /* background: var(--colorTransparent) url(../images/container_bg.png); */
+}
+#tecnologias #imgs{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#tecnologias div h2{
+    color: var(--colorViolet);
+    font-family: IBM-Plex-Serif;
+}
+#tecnologias div span{
+    gap: 10px;
+}
+#tecnologias div span img{
+    height: 50px;
+    cursor:help ;
+}
+footer{
+    background: var(--colorAnti-flashWhite) url(../images/container_bg.png);
+    display: flex;
+    flex-direction: row;
+}
